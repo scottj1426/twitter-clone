@@ -28,21 +28,21 @@ $('#tweet-content .tweet-compose').click(function () {
     $('.button').removeAttr('disabled',"disabled");
   }
 
+});
 
-
-  $(".button").on('click',function(){
+  $(".button").on('click',function(e){
+    console.log('HIT');
     var tweet = $(".tweet-compose").val();
     var $tweet = $(".tweet").first().clone();
 
   $tweet.find(".tweet-text").text(tweet);
   $tweet.find(".fullname").text("James Scott");
   $tweet.find(".username").text('@JamesnotJimey');
-  $tweet.find(".avatar").first().attr("src",);
+  $tweet.find(".avatar").first().attr("src");
+  console.log('OTHER HIT');
   $('#stream').prepend($tweet);
+
   });
-
-
-});
 
 
   $('.tweet-actions').hide();
